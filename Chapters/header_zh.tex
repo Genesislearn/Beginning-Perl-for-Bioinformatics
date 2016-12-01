@@ -1,0 +1,185 @@
+\documentclass[11pt,a4paper,oneside]{book}
+
+\usepackage{fontspec}
+%\setmainfont[Path=Fonts/]{Inziu-Iosevka-SC-Regular}
+%\setsansfont[Path=Fonts/]{Inziu-Iosevka-SC-Regular}
+%\setmonofont[Path=Fonts/]{SourceCodePro-ExtraLight}
+%
+\usepackage[BoldFont,SlantFont,CJKchecksingle,CJKnumber]{xeCJK}
+%\setCJKmainfont[BoldFont={Inziu-Iosevka-SC-Regular},ItalicFont={Inziu-Iosevka-SC-Regular}]{Inziu-Iosevka-SC-Regular}
+%\setCJKsansfont{Inziu-Iosevka-SC-Regular}
+%\setCJKmonofont{SourceCodePro-ExtraLight}
+% from package fontspec and xeCJK
+\setCJKmainfont[Path=Fonts/]{Inziu-Iosevka-SC-Regular.ttf}
+\setCJKsansfont[Path=Fonts/]{Inziu-Iosevka-SC-Regular.ttf}
+\setCJKmonofont[Scale=0.9,Path=Fonts/]{Inziu-Iosevka-SC-Regular.ttf}
+\setmainfont[Path=Fonts/]{Inziu-Iosevka-SC-Regular.ttf}
+\setsansfont[Path=Fonts/]{Inziu-Iosevka-SC-Regular.ttf}
+% "Mapping={}" make quote symbol straight
+\setmonofont[Mapping={},Path=Fonts/]{SourceCodePro-ExtraLight.ttf}
+
+\punctstyle{hangmobanjiao}
+
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+
+%首行缩进
+%\usepackage{indentfirst}
+\makeatletter
+\let\@afterindentfalse\@afterindenttrue
+\@afterindenttrue
+\makeatother
+\setlength{\parindent}{2em}
+
+\linespread{1.2}
+
+\usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm,marginparwidth=4.7cm,marginparsep=0.3cm]{geometry}
+
+%在每一章的开头列出section的列表
+\usepackage{minitoc}
+\setcounter{minitocdepth}{1}
+\renewcommand{\mtctitle}{目录}
+
+%修改目录中的章节格式
+\usepackage{titletoc}
+\titlecontents{chapter}[0pt]{\vspace{0.3\baselineskip}\bfseries}{第 \thecontentslabel 章\quad}{}{\hfill\contentspage}
+\titlecontents{section}[2em]{\vspace{0.05\baselineskip}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*[8pt]{$\cdot$}\contentspage}
+\titlecontents{subsection}[4em]{\vspace{0.02\baselineskip}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*[8pt]{$\cdot$}\contentspage}
+\titlecontents{figure}[0pt]{\vspace{0.05\baselineskip}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*[8pt]{$\cdot$}\contentspage}
+\titlecontents{table}[0pt]{\vspace{0.05\baselineskip}}{\thecontentslabel\quad}{}{\hspace{.5em}\titlerule*[8pt]{$\cdot$}\contentspage}
+
+%整段缩进
+\usepackage{changepage}
+
+%图文混排
+%\usepackage{picins}
+
+%在footnote中使用verb
+\usepackage{fancyvrb}
+%在section中使用\verb
+\usepackage{cprotect}
+
+%文本框
+%\usepackage{fancybox}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\small 第 \thechapter 章\quad #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\small \thesection \quad #1}{}}
+\fancyhf{}
+\fancyhead[ER]{\leftmark}
+\fancyhead[OL]{\rightmark}
+\fancyhead[EL,OR]{$\cdot$ \thepage \ $\cdot$}
+\renewcommand{\headrulewidth}{0.5pt}
+
+%单面模式
+%\newpagestyle{main}{
+%\sethead[$\cdot$~\thepage~$\cdot$][][\chaptername\quad\chaptertitle]{\small\S\,\thesection\quad\sectiontitle}{}{$\cdot$~\thepage~$\cdot$}
+%\setfoot{}{}{}\headrule}
+%\pagestyle{main}
+
+\usepackage{titlesec}
+\titleformat{\chapter}{\centering\LARGE\bfseries}{第 \thechapter 章}{1em}{}
+
+%附录
+\usepackage{appendix}
+
+\usepackage[dvipsnames,tables]{xcolor}
+\graphicspath{{figures/}}
+%\usepackage[xetex,bookmarksnumbered=true,bookmarksopen=true,pdfborder=1,breaklinks,colorlinks,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage[xetex,bookmarksnumbered=true,bookmarksopen=true,pdfborder=1,breaklinks,
+linkcolor=black,
+anchorcolor=black,
+citecolor=black
+]{hyperref}
+%\usepackage[xetex,bookmarksnumbered=true,bookmarksopen=true,pdfborder=1,breaklinks]{hyperref}
+
+\hypersetup{
+	bookmarksnumbered = true,
+	pdftitle = {Beginning Perl for Bioinformatics},
+	pdfcreator = {https://m-mono.github.io},
+	pdfauthor = {James D. Tisdall},
+	pdfsubject = {生物信息学 Perl 语言入门},
+	colorlinks = false,
+	pdfborder = 0 0 0,
+	pdfkeywords = {该书向只有很少、甚至没有编程经验的生物学家展示了如何使用Perl这一理想的编程语言进行生物学数据分析。每一章都集中解决特定的问题或者问题集，所以当你读完本书后，你会对Perl的基础知识有一个深刻的理解，收集到解析BLAST和GenBank等任务的程序，同时习得处理更加高级的生物信息学问题的技能。}
+}
+
+\def\chapterautorefname~#1\null{第{#1}章\null}
+\def\sectionautorefname~#1\null{第{#1}节\null}
+\def\subsectionautorefname~#1\null{第{#1}小节\null}
+\def\subsubsectionautorefname~#1\null{第{#1}小节\null}
+\def\figureautorefname{图}
+\def\tableautorefname{表}
+\def\Appendixautorefname~#1\null{附录{#1}\null}
+\def\lstlistingautorefname{例}
+
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\renewcommand{\contentsname}{目\quad 录}
+\renewcommand{\listfigurename}{图\quad 片}
+\renewcommand{\listtablename}{表\quad 格}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+%\renewcommand{\lstlistingname}{例}
+\renewcommand{\indexname}{索\quad 引}
+%\renewcommand{\figureautorefname}{图}
+%\renewcommand{\tableautorefname}{表}
+\renewcommand{\footnoteautorefname}{脚注}
+\renewcommand{\itemautorefname}{项}
+
+%使表格可以跨页
+\usepackage{booktabs,tabu,longtable}
+%调整表头和表格之间的间距
+\setlength\belowcaptionskip{0.2em}
+%调整表格行高
+\renewcommand{\arraystretch}{0.8}
+
+%调整列表间及其上下的间距
+\usepackage{enumitem}
+\setlist{nosep}
+
+%设置颜色的快捷命令
+\newcommand{\red}{\textcolor{red}}
+\newcommand{\gray}{\textcolor{gray}}
+\newcommand{\black}{\textcolor{black}}
+
+%罗马数字
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+%插入源代码
+\usepackage{listings}
+%The header name for the list of listings: Listings
+\renewcommand{\lstlistlistingname}{程\quad 序}
+%The caption label for listings: Listing
+\renewcommand{\lstlistingname}{例}
+\contentsuse{lstlisting}{lol}
+\titlecontents{lstlisting}[0pt]{\vspace{0.05\baselineskip}}{}{\thecontentslabel\quad}{\hspace{.5em}\titlerule*[8pt]{$\cdot$}\contentspage}
+\lstset{
+  language=Perl,
+  %basicstyle=\normalsize\tt,
+  basicstyle=\small\tt,
+  frame=l,
+  numbers=left,
+  numberstyle=\footnotesize,
+  showstringspaces=false,
+  %breaklines=true,
+  breaklines=false,
+  breakatwhitespace=false,
+}
+\usepackage{caption}
+\captionsetup[lstlisting]{labelformat=empty,labelsep=none,format=plain,font=bf}
+%\captionsetup[lstlisting]{labelformat=empty,labelsep=none,textformat=empty,skip=-20pt}
+
+%suppresses page numbers and headings from appearing on empty pages.
+%remove headers and footers for pages between chapters
+\usepackage{emptypage}
+
+\usepackage{mdframed}
+\usepackage{graphics,graphicx,pdfpages}
