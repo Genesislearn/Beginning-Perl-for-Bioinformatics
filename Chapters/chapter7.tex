@@ -145,9 +145,9 @@ $verbs[3]
 为了随机选取一个动词，你调用了几个函数：
 
 \begin{description}
-  \item[\textcolor{red}{\textit{scalar}}] 确定数组的大小
-  \item[\textcolor{red}{\textit{rand}}] 从数组大小决定的范围内选取一个随机数字
-  \item[\textcolor{red}{\textit{int}}] 把\textit{rand}返回的浮点数转变成用于索引数组元素的整数值
+  \item[\textcolor{black}{\textit{scalar}}] 确定数组的大小
+  \item[\textcolor{black}{\textit{rand}}] 从数组大小决定的范围内选取一个随机数字
+  \item[\textcolor{black}{\textit{int}}] 把\textit{rand}返回的浮点数转变成用于索引数组元素的整数值
 \end{description}
 
 使用嵌套的括号，这些函数调用被组合到了一行中。有时，这会生成难于阅读的代码，对于作者这种辛苦工作得来的成果，某些吹毛求疵的读者可能会直喊头疼，因为它们并不讨人喜欢。你可以使用一些额外的临时变量，试着重写这些行的代码。比如，你可以这样写：
@@ -709,44 +709,44 @@ for (my $k = 0 ; $k < scalar @random_DNA - 1 ; ++$k) {
 你可能发现这样做是比较值得的，就是把序列数目设置成一个小的数值，比如3或者4，然后思考（手中拿着纸笔）在程序运行过程中嵌套循环是如何工作的，变量 \verb|$k|和 \verb|$i|是如何一步步改变的。或者，你也可以使用Perl调试器来看看到底发生了什么。
 
 \section{练习题}
-\textcolor{red}{\textit{习题7.1}}
+\textcolor{black}{\textit{习题7.1}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，询问你选取一个氨基酸，然后（随机）猜测你选的是哪个氨基酸。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题7.2}}
+\textcolor{black}{\textit{习题7.2}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，选取四个核苷酸中的一个，然后一直进行提示，直到你正确猜出选取的是哪个核苷酸。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题7.3}}
+\textcolor{black}{\textit{习题7.3}}
 \begin{adjustwidth}{4em}{}
 编写一个子程序，随机打乱数组的元素。子程序以一个数组作为参数，返回具有相同元素、但打乱成随机顺序的数组。原始数组中的每一个元素在输出的数组中都出现且仅出现一次，就像洗牌一样。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题7.4}}
+\textcolor{black}{\textit{习题7.4}}
 \begin{adjustwidth}{4em}{}
 编写一个程序来突变蛋白质序列，就像\autoref{exam:example7.2}中突变DNA的代码一样。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题7.5}}
+\textcolor{black}{\textit{习题7.5}}
 \begin{adjustwidth}{4em}{}
 编写一个子程序，给定一个密码子（一个长3bp的DNA片段），返回密码子中的一个随机突变。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题7.6}}
+\textcolor{black}{\textit{习题7.6}}
 \begin{adjustwidth}{4em}{}
 有些版本的Perl为随机数生成器自动设置种子，这样在使用 \verb|rand|生成随机数之前就不用多余使用 \verb|srand|来设置种子了。实验一下，看看 \verb|rand|是否会自动调用 \verb|srand|，还是需要你自己明确地去调用 \verb|srand|，就像你在本章的代码中看到的那样。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题7.7}}
+\textcolor{black}{\textit{习题7.7}}
 \begin{adjustwidth}{4em}{}
 有时，在随机选取的时候并不是所有的选项都会被选择到。编写一个子程序，随机返回一个核苷酸，而且是按照指定的每个核苷酸的几率。给这个子程序传递四个数字作为参数，代表每中核苷酸的几率。如果每种核苷酸的几率都是0.25，这个子程序在选取每种核苷酸时就是完全均等的。为了检查错误，子程序还要确保四个几率之和为1。
 
 \textit{提示：}实现这一点的一种方法就是，把从0到1的范围分成四个区间，每个区间的长度和相应核苷酸的几率相对应。然后，简单的从0到1之间随机选取一个数字，看看它落在了哪个区间中，就返回相对应的核苷酸即可。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题7.8}}
+\textcolor{black}{\textit{习题7.8}}
 \begin{adjustwidth}{4em}{}
 \textit{这是一个有一定难度的练习题。}Perl中的\textit{study}函数可能能提高DNA或蛋白质中基序的查找速度。查看关于这个函数的Perl文档。它的用法非常简单：给定存储在 \verb|$sequence|变量中的一些序列数据，在进行搜索之前键入：
 

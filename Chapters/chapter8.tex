@@ -577,32 +577,32 @@ use BeginPerlBioinfo;
 
 有许多这样的格式，仅仅针对DNA的常用格式可能就有20种之多。当你在实验室中分析序列时，格式的这种多样化会让人头疼不已：因为对于你用来分析序列的各种程序，都需要把一种格式转换成另一种格式。下面是几个最流行的格式：
 
-\textcolor{red}{\textit{FASTA}}
+\textcolor{black}{\textit{FASTA}}
 \begin{adjustwidth}{4em}{}
 FASTA和基本局部相似性比对搜索技术（BLAST\footnote{译者注：BLAST是Basic Local Alignment Search Tool的缩写。}，Basic Local Alignment Search Technique）程序非常流行，它们都使用FASTA格式。因为它的简洁性，FASTA格式可能是所有格式中除GenBank格式以外使用最为广泛的一种格式。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{Genetic Sequence Data Bank (GenBank\footnote{译者注：GenBank指的是Genetic Sequence Database。})}}
+\textcolor{black}{\textit{Genetic Sequence Data Bank (GenBank\footnote{译者注：GenBank指的是Genetic Sequence Database。})}}
 \begin{adjustwidth}{4em}{}
 GenBank收集了所有公开发表的遗传数据。除了DNA序列，它还包括了许多相关的信息。它非常重要，所以我们将在\autoref{chap:chapter10}中对GenBank文件进行深入探讨。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{欧洲分子生物学实验室（EMBL，European Molecular Biology Laboratory）}}
+\textcolor{black}{\textit{欧洲分子生物学实验室（EMBL，European Molecular Biology Laboratory）}}
 \begin{adjustwidth}{4em}{}
 EMBL数据库大体上和GenBank、DDBJ（日本DNA数据库，DNA Data Bank of Japan）存储有相同的数据，但格式稍有不同。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{简单数据，或美国应用生物系统公司（ABI，Applied Biosystems）测序仪的输出}}
+\textcolor{black}{\textit{简单数据，或美国应用生物系统公司（ABI，Applied Biosystems）测序仪的输出}}
 \begin{adjustwidth}{4em}{}
 这是没有进行任何格式化的DNA序列数据，仅仅是代表碱基的字符而已。ABI的测序机器和其他机器以及程序把它直接输出到文件中。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{蛋白质识别资源（PIR，Protein Identification Resource）}}
+\textcolor{black}{\textit{蛋白质识别资源（PIR，Protein Identification Resource）}}
 \begin{adjustwidth}{4em}{}
 PIR是一个良好组织的蛋白质序列数据集合。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{遗传学电脑集团（GCG，Genetics Computer Group）}}
+\textcolor{black}{\textit{遗传学电脑集团（GCG，Genetics Computer Group）}}
 \begin{adjustwidth}{4em}{}
 Accelrys的GCG程序（亦称GCG Wisconsin
 package）在许多大型研究机构中使用。要想被它们的程序使用，数据必须以GCG格式进行存储。
@@ -1101,64 +1101,64 @@ PPRPLSAAI
 \end{lstlisting}
 
 \section{练习题}
-\textcolor{red}{\textit{习题8.1}}
+\textcolor{black}{\textit{习题8.1}}
 \begin{adjustwidth}{1cm}{}
 编写一个子程序，检查一个字符串，如果它是一个DNA序列就返回 \verb|true|。编写另外一个子程序来检查蛋白质序列数据。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题8.2}}
+\textcolor{black}{\textit{习题8.2}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，在未排序的数组中通过基因名查找一个基因。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题8.3}}
+\textcolor{black}{\textit{习题8.3}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，在一个排序的数组中通过基因名查找一个基因。使用Perl的\textit{sort}函数来对数组进行排序。额外的得分：编写一个折半查找的子程序进行搜索。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题8.4}}
+\textcolor{black}{\textit{习题8.4}}
 \begin{adjustwidth}{4em}{}
 编写一个子程序，把一个元素插入到一个排序的数组中。提示：就像在\autoref{chap:chapter4}中演示的那样，使用Perl的\textit{splice}函数插入元素。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题8.5}}
+\textcolor{black}{\textit{习题8.5}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，在散列中通过基因名查找一个基因。从你自己的工作中获取基因，或者尝试从 \href{www.ncbi.nlm.nih.gov}{www.ncbi.nlm.nih.gov} 或\autoref{chap:chapteraa}中的一个网站上下载一个物种的全部基因列表。为所有的基因制作一个散列（键是基因名，值是基因ID或者基因序列）。提示：你可能需要编写一个简短的Perl程序，来重新格式化你手头的基因列表，这样就容易把它做成Perl的散列了。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题8.6}}
+\textcolor{black}{\textit{习题8.6}}
 \begin{adjustwidth}{4em}{}
 编写一个子程序，检查数组中的数据，如果是FASTA格式就返回 \verb|true|。注意FASTA格式使用标准的IUB/IUPAC氨基酸和核苷酸代码，以及代表未知长度的空位的破折号（-）。此外，对于氨基酸来说，星号（*）代表终止密码子。 在正则表达式中使用星号时一定要小心，使用 \verb|\*|对它进行转义，来匹配真正的星号。
 \end{adjustwidth}
 
 剩下的问题就是，DNA的突变对它们编码的蛋白质的影响。这需要把\autoref{chap:chapter7}中随机化和突变的主题与本章中遗传密码的主题结合起来。
 
-\textcolor{red}{\textit{习题8.7}}
+\textcolor{black}{\textit{习题8.7}}
 \begin{adjustwidth}{4em}{}
 对于每一个密码子，看看密码子上单核苷酸的突变会产生什么影响：是编码同样的氨基酸，还是新的密码子会编码一个完全不同的氨基酸？新编码的是那种氨基酸？编写一个子程序，给定一个密码子，返回密码子上任意一个突变导致的编码出的新的所有的氨基酸列表。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题8.8}}
+\textcolor{black}{\textit{习题8.8}}
 \begin{adjustwidth}{4em}{}
 编写一个子程序，给定一个氨基酸，随机把它改变成习题8.7计算出来的氨基酸中的一种。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题8.9}}
+\textcolor{black}{\textit{习题8.9}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，随机突变蛋白质中的氨基酸，但是要限定在原始密码子的单核苷酸突变能导致的突变范围内，就像习题8.7和8.8中的那样。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题8.10}}
+\textcolor{black}{\textit{习题8.10}}
 \begin{adjustwidth}{4em}{}
 有些密码子比其他的密码子更容易出现在随机DNA中。比如，在64种可能的密码子中，有6种编码丝氨酸，但只有2中编码苯丙氨酸。编写一个子程序，给定一个氨基酸，返回它被随机生成的密码子编码的可能性（参看\autoref{chap:chapter7}）。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题8.11}}
+\textcolor{black}{\textit{习题8.11}}
 \begin{adjustwidth}{4em}{}
 编写一个子程序，以一个氨基酸、位置1、2或3和一个核苷酸作为它的参数。然后，对于编码这个特定氨基酸的每一个密码子（可能有一到六个不等的密码子），都在指定的位置上突变称指定的核苷酸。最后，返回突变后的密码子编码的氨基酸集。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题8.12}}
+\textcolor{black}{\textit{习题8.12}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，给定两个氨基酸，返回它们潜在（而非指定）密码子上单核苷酸突变从而导致一个氨基酸的密码子突变成另一个氨基酸的密码子的概率。
 \end{adjustwidth}

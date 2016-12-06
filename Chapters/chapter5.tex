@@ -215,7 +215,7 @@ GLQYALNVPISVKQEITFTDVSEQLMRDKKQIR
 \label{sect:section5.2}
 一旦你开始使用循环和条件语句，你就需要认真考虑格式的问题了。当格式化Perl代码时你有多种选择。对于 \verb|while|循环中的\textit{if}语句，比较一下下面几种不同的格式化方法：
 
-\textcolor{red}{\textit{格式A}}
+\textcolor{black}{\textit{格式A}}
 \begin{adjustwidth}{4em}{}
 \begin{lstlisting}
 while ( $alive ) {
@@ -226,7 +226,7 @@ while ( $alive ) {
 \end{lstlisting}
 \end{adjustwidth}
 
-\textcolor{red}{\textit{格式B}}
+\textcolor{black}{\textit{格式B}}
 \begin{adjustwidth}{4em}{}
 \begin{lstlisting}
 while ( $alive )
@@ -239,7 +239,7 @@ while ( $alive )
 \end{lstlisting}
 \end{adjustwidth}
 
-\textcolor{red}{\textit{格式C}}
+\textcolor{black}{\textit{格式C}}
 \begin{adjustwidth}{4em}{}
 \begin{lstlisting}
   while ( $alive )
@@ -252,7 +252,7 @@ while ( $alive )
 \end{lstlisting}
 \end{adjustwidth}
 
-\textcolor{red}{\textit{格式D}}
+\textcolor{black}{\textit{格式D}}
 \begin{adjustwidth}{4em}{}
 \begin{lstlisting}
 while($alive){if($needs_nutrients){print "Cell needs nutrients\n";}}
@@ -855,13 +855,13 @@ $nonbase = (length $dna) - $basecount;
 你可能会觉得计数碱基的程序有三个（实际上是四个）版本有点多了，尤其是每个版本中的大部分代码都是一样的。程序中唯一改变的就是计数碱基的部分。有没有什么办法，能够让我们方便的只改变计数碱基的部分呢？在\autoref{chap:chapter6}中，你将看到这样的方法，使用子程序来把程序进行分割。
 
 \section{练习题}
-\textcolor{red}{\textit{习题5.1}}
+\textcolor{black}{\textit{习题5.1}}
 \begin{adjustwidth}{4em}{}
 使用循环写一个永不挂起的程序。每次迭代时，条件测试都应该永远为 \verb|真|。注意，有的系统会注意到你在一个无穷的循环中，从而自动结束程序。依据你使用的操作系统的不同，结束程序的方法也会有所不同。在Unix和Linux、Windows
 MS-DOS命令窗口或者MacOS X shell窗口中，使用Ctrl-C就可以结束程序。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题5.2}}
+\textcolor{black}{\textit{习题5.2}}
 \begin{adjustwidth}{4em}{}
 提示用户输入两个（短的）DNA字符串。通过使用 \verb|.=|赋值操作符，把第二个附加到第一个DNA字符串的后面，从而把两者连接起来。先打印输出连接后的两个字符串，然后打印输出第二个字符串，但要与连接后字符串末尾对应的字符串对齐。举个例子，如果输入的字符串是 \verb|AAAA|和 \verb|TTTT|，则要打印输出：
 \begin{verbatim}
@@ -870,42 +870,42 @@ AAAATTTT
 \end{verbatim}
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题5.3}}
+\textcolor{black}{\textit{习题5.3}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，输出从1到100的所有数字。当然，你的程序代码应该远远小于100行。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题5.4}}
+\textcolor{black}{\textit{习题5.4}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，计算DNA链的反向互补链。不要使用\textit{s///}或者\textit{tr}函数。使用\textit{substr}函数，当你计算反向互补链时，要一次检查原始DNA中的一个碱基。（提示：你可能会发现检查原始DNA字符串时，尽管从左到右也是可以的，但从右向左要更加方便一些) 
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题5.5}}
+\textcolor{black}{\textit{习题5.5}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，报告蛋白质序列中疏水氨基酸的百分比。（想要知道哪些氨基酸是疏水性的，可以参看任何关于蛋白质、分子生物学或细胞生物学导论性的介绍。在\autoref{chap:chapteraa}中你会找到一些有用的资源。）
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题5.6}}
+\textcolor{black}{\textit{习题5.6}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，检查一下作为参数提供的两个DNA字符串是不是反向互补的。使用Perl的内置函数\textit{split}、\textit{pop}、\textit{shift}和\textit{eq}（\textit{eq}实际上是一个操作符）。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题5.7}}
+\textcolor{black}{\textit{习题5.7}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，报告序列的GC含量。（换言之，就是给出DNA中G和C的百分比）。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题5.8}}
+\textcolor{black}{\textit{习题5.8}}
 \begin{adjustwidth}{4em}{}
 修改\autoref{exam:example5.3}，使它不仅能通过正则表达式找到基序，还能打印输出它找到的基序。举个例子，如果你使用正则表达式查找基序EE.*EE，你的程序应该输出EETVKNDEE。你可以使用特殊变量 \verb|$&|。在一次成功的模式匹配后，这个特殊变量会保存匹配到的模式。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题5.9}}
+\textcolor{black}{\textit{习题5.9}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，交换DNA字符串中特定位置的两个碱基。（提示：你可以使用Perl的 \verb|substr|函数或 \verb|slice|函数。）
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题5.10}}
+\textcolor{black}{\textit{习题5.10}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，写入一个临时文件然后把它删除掉。\textit{unlink}函数可以删除一个文件，举个例子，这样来使用：
 \begin{lstlisting}

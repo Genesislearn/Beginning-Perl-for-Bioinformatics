@@ -31,17 +31,17 @@ if( $dna =~ /CT[CGT]ACG/ ) {
 
 正则表达式基于三个基础的理念：
 
-\textcolor{red}{\textit{重复（或闭包）}}
+\textcolor{black}{\textit{重复（或闭包）}}
 \begin{adjustwidth}{4em}{}
 \hspace*{2em}星号（*），也叫做克莱尼闭包或克莱尼星号，表示前面的字符重复0次或多次。比如， \verb|abc*|匹配所有这些字符串： \verb|ab|， \verb|abc|， \verb|abcc|， \verb|abccc|， \verb|abcccc|等等。这个正则表达式匹配无穷多个字符串。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{择一}}
+\textcolor{black}{\textit{择一}}
 \begin{adjustwidth}{4em}{}
 \hspace*{2em}在Perl中，模式 \verb=(a|b)=（读作： \verb|a or b|）匹配字符串 \verb|a|或者字符串 \verb|b|。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{连接}}
+\textcolor{black}{\textit{连接}}
 \begin{adjustwidth}{4em}{}
 \hspace*{2em}这是显而易见的一点。在Perl中，字符串 \verb|ab|表示字符 \verb|a|后面跟着（与之相连接）字符 \verb|b|。
 \end{adjustwidth}
@@ -69,27 +69,27 @@ Perl文档是最基本的：从 \href{http://www.perldoc.com/perl5.6/pod/perlre.
 \subsection{程序规划}
 在前面的\autoref{chap:chapter5}中，你已经看到如何在文本中查找正则表达式了。所以你也知道如何使用Perl来查找序列中的基序。现在让我们想想，该如何利用这些技术来生成限制酶切图谱。下面是需要询问的一些问题：
 
-\textcolor{red}{\textit{我在哪里可以找到限制性内切酶的数据？}}
+\textcolor{black}{\textit{我在哪里可以找到限制性内切酶的数据？}}
 \begin{adjustwidth}{4em}{}
 \hspace*{2em}限制性内切酶的数据可以在限制性酶切酶数据库（REBASE，Restriction Enzyme Database）中找到，它的网址是 \href{http://rebase.neb.com/rebase/rebase.html}{http://rebase.neb.com/rebase/rebase.html}。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{我该如何使用正则表达式表征限制性内切酶？}}
+\textcolor{black}{\textit{我该如何使用正则表达式表征限制性内切酶？}}
 \begin{adjustwidth}{4em}{}
 \hspace*{2em}浏览那个网站，你会看到限制性内切酶用它们自己的语言进行了表征。我们会尝试把这种语言翻译成正则表达式的语言。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{我该如何存储限制性内切酶的数据？}}
+\textcolor{black}{\textit{我该如何存储限制性内切酶的数据？}}
 \begin{adjustwidth}{4em}{}
 \hspace*{2em}大约有1,000种有名字和定义的限制性内切酶。这使得可以使用散列提供的快速的键-值查找对它们进行处理。当你编写一个真正的应用程序时，比如应用于网站，最好是创建一个DBM文件来存储这些信息，当程序需要进行查找时立马就可以使用它。我会在\autoref{chap:chapter10}中对DBM文件进行介绍。此处，我们仅仅是指出这种方式而已。我们将只在程序中保存几个限制性内切酶的定义。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{我该如何接受用户的查询？}}
+\textcolor{black}{\textit{我该如何接受用户的查询？}}
 \begin{adjustwidth}{4em}{}
 \hspace*{2em}你可以询问一个限制性内切酶的名字，或者可以让用户直接键入一个正则表达式。我们将采用第一种方法。此外，你想要让用户指定使用的序列。再重复一次，为了简化问题，你将只从一个DNA样本文件中读入数据。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{我该如何向用户报告返回限制酶切图谱呢？}}
+\textcolor{black}{\textit{我该如何向用户报告返回限制酶切图谱呢？}}
 \begin{adjustwidth}{4em}{}
 \hspace*{2em}这是一个非常重要的问题。最简单的方式就是生成一个位置以及在此处找到的限制性内切酶的名字的列表。因为它呈现的信息非常简单，所以对于进一步的处理非常有用。
 
@@ -439,44 +439,44 @@ Search for what restriction enzyme (or quit)?: quit
 
 \section{练习题}
 \label{sect:section9.4}
-\textcolor{red}{\textit{习题9.1}}
+\textcolor{black}{\textit{习题9.1}}
 \begin{adjustwidth}{4em}{}
 修改\autoref{exam:example9.3}，让它可以从命令行接收DNA；如果它没有被指定，提示用户键入FASTA文件名并读入DNA序列数据。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题9.2}}
+\textcolor{black}{\textit{习题9.2}}
 \begin{adjustwidth}{4em}{}
   修改Exercise
   9.1，从\textit{bionet}文件中读入全部的REBASE限制性内切位点数据，并把它制作成一个散列。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题9.3}}
+\textcolor{black}{\textit{习题9.3}}
 \begin{adjustwidth}{4em}{}
 修改Exercise 9.2，如果不存在DBM文件，就通过存储的REBASE散列生成一个DBM文件，如果DBM文件存在，就直接使用DBM文件。（提前查阅\autoref{chap:chapter10}中关于DBM的更多的信息。）
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题9.4}}
+\textcolor{black}{\textit{习题9.4}}
 \begin{adjustwidth}{4em}{}
 修改\autoref{exam:example5.3}，报告它找到的基序的位置，即使基序在序列数据中出现多次。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题9.5}}
+\textcolor{black}{\textit{习题9.5}}
 \begin{adjustwidth}{4em}{}
 通过打印出序列、并用酶的名字把限制性内切位点标记出来，为限制酶切图谱添加一个切割位点的图形化展示。你能制作一个处理多个限制性内切酶的图谱吗？你该如何处理重叠的限制性内切位点呢？
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题9.6}}
+\textcolor{black}{\textit{习题9.6}}
 \begin{adjustwidth}{4em}{}
 编写一个子程序，返回限制酶切消化片段，就是进行限制性酶切反应后留下的DNA片段。记住要考虑切割位点的位置。（这需要你以另一种方式解析REBASE的\textit{bionet}文件。如果你愿意的话，可以把没有用\^~指明切割位点的限制性内切酶忽略掉。）
 \end{adjustwidth}
 
 
-\textcolor{red}{\textit{习题9.7}}
+\textcolor{black}{\textit{习题9.7}}
 \begin{adjustwidth}{4em}{}
 扩展限制酶切图谱软件，对于非回文识别位点，把相反的另一条链也考虑在内。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题9.8}}
+\textcolor{black}{\textit{习题9.8}}
 \begin{adjustwidth}{4em}{}
 对于没有括号的算术运算，编写一个子程序，根据Perl的优先级规则为其添加上合适的括号。（警告：这是一个相当有难度的练习题，除非你确信有足够的课余时间，否则请跳过该题。对于优先级规则，可以参看Perl的文档。）
 \end{adjustwidth}

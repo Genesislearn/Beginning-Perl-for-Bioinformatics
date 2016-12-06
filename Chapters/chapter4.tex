@@ -779,37 +779,37 @@ $a = @bases;
 现在，你已经看到使用字符串和数组来保存序列和文件数据，学习了Perl的基本语法，包括变量、赋值、打印和读入文件。把DNA转录成了RNA，还计算出了DNA一条链的反向互补序列。到\autoref{chap:chapter5}的结尾，你将学习到Perl语言编程的所有基础知识。
 
 \section{练习题}
-\textcolor{red}{\textit{习题4.1}}
+\textcolor{black}{\textit{习题4.1}}
 \begin{adjustwidth}{4em}{}
 探索编程语言对语法错误的敏感性。对于一个可以运行的程序，试着把其中任意一个语句末尾的分号删除掉，看看会产生什么样的错误信息。试着改变其他的语法项：添加一个小括号或者大括号，把“print”或其他保留字拼错，键入或者删除任何一些内容。程序员对这样的错误习以为常。即使精通语言后，在你一点点编写代码时，仍然会常常出现这样的语法错误。注意一个错误是如何导致多行错误报告的。Perl报告的出现错误的行是不是完全准确？
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题4.2}}
+\textcolor{black}{\textit{习题4.2}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，把一个整数保存到变量中并把它打印出来。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题4.3}}
+\textcolor{black}{\textit{习题4.3}}
 \begin{adjustwidth}{4em}{}
 编写一个把DNA（原始序列可以是大写或者小写）以小写形式（acgt）输出的程序；再编写一个把DNA以大写形式（ACGT）输出的程序。使用\textit{tr///}函数。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题4.4}}
+\textcolor{black}{\textit{习题4.4}}
 \begin{adjustwidth}{4em}{}
 任务和练习4.3中的一样，但这次使用 \verb|\U|和 \verb|\L|字符串指令符来进行大小写的转换。举个例子， \verb|print "\U$DNA"|会把 \verb|$DNA|中的数据以大写形式输出出来。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题4.5}}
+\textcolor{black}{\textit{习题4.5}}
 \begin{adjustwidth}{4em}{}
 有时，信息也可以从RNA流向DNA。编写一个把RNA反转录成DNA的程序。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题4.6}}
+\textcolor{black}{\textit{习题4.6}}
 \begin{adjustwidth}{4em}{}
 读取两个文件的数据，在输出第一个文件的内容后紧接着输出第一个文件的内容。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{习题4.7}}
+\textcolor{black}{\textit{习题4.7}}
 \begin{adjustwidth}{4em}{}
 这是一个更有难度的练习题。编写一个程序，读去一个文件，然后逆序输出它的每一行，也就是首先输出它的最后一行。你可能需要看一下\textit{push}、\textit{pop}、\textit{shift}和\textit{unshift}这四个函数，从中选择一个或多个来完成此练习。你可能需要预习一下\autoref{chap:chapter5}，这样就可以在程序中使用循环了。但取决于你采取的方案，这并不是必需的。或者，你可以对包含所有行的数组使用\textit{reverse}函数。
 \end{adjustwidth}

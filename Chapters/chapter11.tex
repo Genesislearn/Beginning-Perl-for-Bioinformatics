@@ -443,22 +443,22 @@ PDB文件有含有80列的多行组成，每一行都以某个预定义的记录
 
 SEQRES记录类型是一级结构部分（Primary Structure Section）中的四大记录类型之一，它描述了肽或核苷酸序列的一级结构：
 
-\textcolor{red}{\textit{DBREF}}
+\textcolor{black}{\textit{DBREF}}
 \begin{adjustwidth}{4em}{}
 指向序列数据库中的记录
 \end{adjustwidth}
 
-\textcolor{red}{\textit{SEQADV}}
+\textcolor{black}{\textit{SEQADV}}
 \begin{adjustwidth}{4em}{}
 记录PDB与其他序列数据库的冲突
 \end{adjustwidth}
 
-\textcolor{red}{\textit{SEQRES}}
+\textcolor{black}{\textit{SEQRES}}
 \begin{adjustwidth}{4em}{}
 骨干残基的一级序列
 \end{adjustwidth}
 
-\textcolor{red}{\textit{MODRES}}
+\textcolor{black}{\textit{MODRES}}
 \begin{adjustwidth}{4em}{}
 记录标准残基上的修饰
 \end{adjustwidth}
@@ -938,59 +938,59 @@ GGLQVKNFDFTVGKFLTVGGFINNSPQRFSVNVGESMNSLSLHLDHRFNYGADQNTIVMNSTLKGDNGWETEQRSTNFTL
 第一行显示的是氨基酸，而第二行则是二级结构的预测。对于改善输出的子程序，可以参看下一小节。
 
 \section{练习题}
-\textcolor{red}{\textit{练习11.1}}
+\textcolor{black}{\textit{练习11.1}}
 \begin{adjustwidth}{4em}{}
 使用\textit{File::Find}和文件测试操作符来找到你计算机硬盘上最老的和最大的文件。（当你的硬盘空间不够用的时候，你可以删除它们，或者把它们保存到别的地方去。）
 \end{adjustwidth}
 
-\textcolor{red}{\textit{练习11.2}}
+\textcolor{black}{\textit{练习11.2}}
 \begin{adjustwidth}{4em}{}
 找到你计算机中的所有Perl程序。
 
 \textit{提示}：使用\textit{File::Find}。所有的Perl程序都有什么共同点？
 \end{adjustwidth}
 
-\textcolor{red}{\textit{练习11.3}}
+\textcolor{black}{\textit{练习11.3}}
 \begin{adjustwidth}{4em}{}
   解析你计算机上所有PDB文件的HEADER、TITLE和KEYWORDS记录类型。制作一个散列，其\textit{键}就是这些记录类型单词，\textit{值}则是包含这些单词的文件名列表。把它保存为一个DBM文件，并且为它构建一个查询程序。最后，你应该能够在询问一个单词的情况下，比如，sugar这个单词，得到在HEADER、TITLE或者KEYWORDS记录中包含这个单词的所有PDB文件列表。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{练习11.4}}
+\textcolor{black}{\textit{练习11.4}}
 \begin{adjustwidth}{4em}{}
 使用正则表达式（在\autoref{chap:chapter10}中使用过），而不是对由输入行组成的数组进行循环处理（本章中就是这种方法），解析出PDB文件的记录类型。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{练习11.5}}
+\textcolor{black}{\textit{练习11.5}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，提取出PDB文件中HELIX、SHEET和TURN记录类型中包含的二级结构信息。同时输出二级结构和一级序列，这样就比较容易能看出某个残基是处于哪种二级结构中了。（考虑对二级结构使用一种特殊的字母表，这样的话，举个例子，螺旋中的每个残基就都可以用H来表示了。）
 \end{adjustwidth}
 
-\textcolor{red}{\textit{练习11.6}}
+\textcolor{black}{\textit{练习11.6}}
 \begin{adjustwidth}{4em}{}
 编写一个程序，找到一个给定目录中的所有PDB文件，并且运行一个程序（比如\textit{stride}），或者你在练习11.5中编写的程序，报告每个PDB文件中的二级结构。把结果保存到一个DBM文件中，用文件名作为键。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{练习11.7}}
+\textcolor{black}{\textit{练习11.7}}
 \begin{adjustwidth}{4em}{}
 编写一个子程序，对于给定的两个字符串，把它们输出出来，让一个字符串在另一个字符串的上面，但是要有换行（类似与\textit{stride}程序的输出）。使用这个模块打印出\autoref{exam:example11.7}中的字符串。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{练习11.8}}
+\textcolor{black}{\textit{练习11.8}}
 \begin{adjustwidth}{4em}{}
 编写一个递归的子程序，来确定一个数组的大小。你可能想要使用 \verb|pop|或者 \verb|unshift|函数。（暂时忽略掉 \verb|scalar @array|会返回 \verb|@array|的大小这个事实！）
 \end{adjustwidth}
 
-\textcolor{red}{\textit{练习11.9}}
+\textcolor{black}{\textit{练习11.9}}
 \begin{adjustwidth}{4em}{}
 编写一个递归的子程序，从一个PDB文件的SEQRES记录类型中提取出一级氨基酸序列。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{练习11.10}}
+\textcolor{black}{\textit{练习11.10}}
 \begin{adjustwidth}{4em}{}
 （\textit{额外加分}）给定一个原子和距离，找到PDB文件中和这个原子相距距离范围以内的所有其他原子。
 \end{adjustwidth}
 
-\textcolor{red}{\textit{练习11.11}}
+\textcolor{black}{\textit{练习11.11}}
 \begin{adjustwidth}{4em}{}
 （\textit{额外加分}）编写一个程序，找到一级氨基酸序列和$\alpha$-螺旋定位之间的某种相关性。
 \end{adjustwidth}
