@@ -20,9 +20,9 @@ James D. Tisdall
 
 
 + Fonts
-  - [Inziu Iosevka 1.10.5](https://be5invis.github.io/Iosevka/inziu.html)
+  - [Inziu Iosevka 1.11.0](https://be5invis.github.io/Iosevka/inziu.html)
   - [Source Code Pro 2.030](https://github.com/adobe-fonts/source-code-pro)
 
 
 + Editor
-  - [TeXstudio 2.12.0](http://texstudio.sourceforge.net/)
+  - [TeXstudio 2.12.2](http://texstudio.sourceforge.net/)
