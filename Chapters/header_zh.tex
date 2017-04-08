@@ -1,15 +1,31 @@
 \documentclass[11pt,a4paper,oneside]{book}
+\renewcommand{\baselinestretch}{1.3}  %行間距倍率
 
 \usepackage{fontspec}
 \usepackage[BoldFont,SlantFont,CJKchecksingle,CJKnumber]{xeCJK}
 % from package fontspec and xeCJK
-\setCJKmainfont[Path=Fonts/]{inziu-iosevka-SC-regular}
-\setCJKsansfont[Path=Fonts/]{inziu-iosevka-SC-regular}
-\setCJKmonofont[Scale=0.9,Path=Fonts/]{SourceCodePro-Light}
-\setmainfont[Path=Fonts/]{inziu-iosevka-SC-regular}
-\setsansfont[Path=Fonts/]{inziu-iosevka-SC-regular}
+\setCJKmainfont[Path=Fonts/,
+BoldFont={inziu-iosevka-SC-regular.ttf},
+ItalicFont={inziu-iosevka-SC-regular.ttf},
+BoldItalicFont={inziu-iosevka-SC-regular.ttf},
+SlantedFont={inziu-iosevka-SC-regular.ttf},
+BoldSlantedFont={inziu-iosevka-SC-regular.ttf},
+SmallCapsFont={inziu-iosevka-SC-regular.ttf}
+]{inziu-iosevka-SC-regular.ttf}
+\setCJKsansfont[Path=Fonts/]{inziu-iosevka-SC-regular.ttf}
+\setCJKmonofont[Scale=0.9,Path=Fonts/]{SourceCodePro-Light.otf}
+
+\setmainfont[Path=Fonts/,
+BoldFont={inziu-iosevka-SC-regular.ttf},
+ItalicFont={SourceCodePro-It.otf},
+BoldItalicFont={inziu-iosevka-SC-regular.ttf},
+SlantedFont={inziu-iosevka-SC-regular.ttf},
+BoldSlantedFont={inziu-iosevka-SC-regular.ttf},
+SmallCapsFont={inziu-iosevka-SC-regular.ttf}
+]{inziu-iosevka-SC-regular.ttf}
+\setsansfont[Path=Fonts/]{inziu-iosevka-SC-regular.ttf}
 % "Mapping={}" make quote symbol straight
-\setmonofont[Mapping={},Path=Fonts/]{SourceCodePro-Light}
+\setmonofont[Mapping={},Path=Fonts/]{SourceCodePro-Light.otf}
 
 \punctstyle{hangmobanjiao}
 
