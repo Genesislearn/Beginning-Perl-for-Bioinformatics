@@ -12,15 +12,15 @@ James D. Tisdall
 
 
 + Apple macOS
-  - [MacTeX /2016](https://www.tug.org/mactex/)
+  - [MacTeX /2017](https://www.tug.org/mactex/)
 
 
 + GNU/Linux & Microsoft Windows
-  - [TeX Live /2016](https://www.tug.org/texlive/)
+  - [TeX Live /2017](https://www.tug.org/texlive/)
 
 
 + Fonts
-  - [Inziu Iosevka /1.12.3](https://be5invis.github.io/Iosevka/inziu.html)
+  - [Inziu Iosevka /1.13.0](https://be5invis.github.io/Iosevka/inziu.html)
   - [Source Code Pro /2.030](https://github.com/adobe-fonts/source-code-pro)
 
 
