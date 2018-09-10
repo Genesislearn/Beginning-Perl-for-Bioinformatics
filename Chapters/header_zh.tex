@@ -5,25 +5,25 @@
 \usepackage[BoldFont,SlantFont,CJKchecksingle,CJKnumber]{xeCJK}
 % from package fontspec and xeCJK
 \setCJKmainfont[Path=Fonts/,
-BoldFont={inziu-iosevka-SC-regular.ttf},
-ItalicFont={inziu-iosevka-SC-regular.ttf},
-BoldItalicFont={inziu-iosevka-SC-regular.ttf},
-SlantedFont={inziu-iosevka-SC-regular.ttf},
-BoldSlantedFont={inziu-iosevka-SC-regular.ttf},
-SmallCapsFont={inziu-iosevka-SC-regular.ttf}
-]{inziu-iosevka-SC-regular.ttf}
-\setCJKsansfont[Path=Fonts/]{inziu-iosevka-SC-regular.ttf}
+BoldFont={sarasa-gothic-sc-bold.ttf},
+ItalicFont={sarasa-gothic-sc-italic.ttf},
+BoldItalicFont={sarasa-gothic-sc-bolditalic.ttf},
+SlantedFont={sarasa-gothic-sc-regular.ttf},
+BoldSlantedFont={sarasa-gothic-sc-bolditalic.ttf},
+SmallCapsFont={sarasa-gothic-sc-regular.ttf}
+]{sarasa-gothic-sc-regular.ttf}
+\setCJKsansfont[Path=Fonts/]{sarasa-gothic-sc-regular.ttf}
 \setCJKmonofont[Scale=0.9,Path=Fonts/]{SourceCodePro-Light.otf}
 
 \setmainfont[Path=Fonts/,
-BoldFont={inziu-iosevka-SC-regular.ttf},
-ItalicFont={SourceCodePro-It.otf},
-BoldItalicFont={inziu-iosevka-SC-regular.ttf},
-SlantedFont={inziu-iosevka-SC-regular.ttf},
-BoldSlantedFont={inziu-iosevka-SC-regular.ttf},
-SmallCapsFont={inziu-iosevka-SC-regular.ttf}
-]{inziu-iosevka-SC-regular.ttf}
-\setsansfont[Path=Fonts/]{inziu-iosevka-SC-regular.ttf}
+BoldFont={sarasa-gothic-sc-bold.ttf},
+ItalicFont={sarasa-gothic-sc-italic.ttf},
+BoldItalicFont={sarasa-gothic-sc-bolditalic.ttf},
+SlantedFont={sarasa-gothic-sc-regular.ttf},
+BoldSlantedFont={sarasa-gothic-sc-bold.ttf},
+SmallCapsFont={sarasa-gothic-sc-regular.ttf}
+]{sarasa-gothic-sc-regular.ttf}
+\setsansfont[Path=Fonts/]{sarasa-gothic-sc-regular.ttf}
 % "Mapping={}" make quote symbol straight
 \setmonofont[Mapping={},Path=Fonts/]{SourceCodePro-Light.otf}
 
@@ -192,3 +192,6 @@ citecolor=black
 
 \usepackage{mdframed}
 \usepackage{graphics,graphicx,pdfpages}
+
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
