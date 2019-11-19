@@ -9,7 +9,7 @@ James D. Tisdall
 编译环境：
 + **Fork**
   + [Yixf-Education](https://github.com/Yixf-Education/BP4B)
-  
+
     ```
     译文版权声明
 
@@ -28,24 +28,24 @@ James D. Tisdall
       ```
 
 + **TeX Distribution**
-    + [MacTeX 2018](https://www.tug.org/mactex/) [(License)](https://www.tug.org/mactex/src/License.rtf)
+    + [MacTeX 2019](https://www.tug.org/mactex/) [(License)](https://www.tug.org/mactex/src/License.rtf)
         + for Apple macOS
 
 
-    + [TeX Live 2018](https://www.tug.org/texlive/) [(License)](https://www.tug.org/texlive/copying.html)
+    + [TeX Live 2019](https://www.tug.org/texlive/) [(License)](https://www.tug.org/texlive/copying.html)
        + for GNU/Linux & Microsoft Windows
 
 
 + **Fonts**
-  + [be5invis 更纱黑体 Sarasa Gothic 0.8.0](https://github.com/be5invis/Sarasa-Gothic) [(License)](https://github.com/be5invis/Sarasa-Gothic/blob/master/LICENSE)
+  + [be5invis 更纱黑体 Sarasa Gothic 0.10.2](https://github.com/be5invis/Sarasa-Gothic) [(License)](https://github.com/be5invis/Sarasa-Gothic/blob/master/LICENSE)
   + [Adobe Source Code Pro 2.030](https://github.com/adobe-fonts/source-code-pro) [(License)](https://github.com/adobe-fonts/source-code-pro/blob/master/LICENSE.md)
 
 
 + **Editor**
-    + [Visual Studio Code 1.32.3](https://code.visualstudio.com/) [(License)](https://code.visualstudio.com/License/)
-        + [LaTeX Workshop 6.2.2](https://github.com/James-Yu/LaTeX-Workshop) [(License)](https://github.com/James-Yu/LaTeX-Workshop/blob/master/LICENSE.txt)
+    + [Visual Studio Code 1.40.1](https://code.visualstudio.com/) [(License)](https://code.visualstudio.com/License/)
+        + [LaTeX Workshop 8.4.1](https://github.com/James-Yu/LaTeX-Workshop) [(License)](https://github.com/James-Yu/LaTeX-Workshop/blob/master/LICENSE.txt)
             + Configuration for LaTeX Workshop extension to complie XeTeX source code into PDF Version 1.7 (Acrobat 8.x)
-            
+
                 ```Visual Studio Code``` ⇢ ```File``` ⇢ ```Preferences``` ⇢ ```Settings``` ⇢ ```Extensions``` ⇢ ```LaTeX``` ⇢ ```Recipes```
 
 
